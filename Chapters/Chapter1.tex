@@ -1,0 +1,81 @@
+% Бүлэг 1
+
+
+% zuwhun uuriin sedewiin tuhai bichne sedewiin neriig husseneeree udirdana
+\chapter{Хичээлийн ухаалаг тэмдэглэлийн системийн тухай онол, арга зүйн судалгаа} % Бүлгийн нэр
+\label{Chapter1} % Энэ бүлэг рүү ишлэл хийх бол \ref{Chapter1} командыг ашигла 
+
+%-------------------------------------------------------------------------------
+
+% Агуулгад ашигласан хэвшүүлэлтийн зарим командын тодорхойлолт
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\tabhead}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\file}[1]{\texttt{\bfseries#1}}
+\newcommand{\option}[1]{\texttt{\itshape#1}}
+
+%-------------------------------------------------------------------------------
+\section{Хичээлийн ухаалаг тэмдэглэлийн системийн тухай}
+\paragraph{}
+
+\section{Ижил төстэй системийн судалгаа}
+\paragraph{} Дэлхийн зах зээл дээр хиймэл оюун ухаанд суурилсан тэмдэглэл хөтлөх болон сургалтын хэд хэдэн системүүд байдаг. Эдгээрийг судалж үзэх нь өөрийн системийн давуу талыг тодорхойлоход чухал юм.
+
+\begin{enumerate}
+  \item \textbf{Notion AI:} Notion нь тэмдэглэл хөтлөх хүчирхэг хэрэгсэл бөгөөд сүүлийн үед AI нэмэлтийг ашиглан текстийг хураангуйлах, засварлах боломжтой болсон. Гэвч энэ нь сургалтын үйл явцад зориулагдаагүй, ерөнхий зориулалттай тул флаш карт үүсгэх, өөрийгөө сорих функц дутмаг байдаг.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/chapter1/similarsystems/notionailogo.png}
+    \caption{Notion AI лого}
+    \label{fig:notionailogo}
+  \end{figure}
+  \item \textbf{Quizlet:} Флаш карт болон сорил үүсгэхэд хамгийн өргөн хэрэглэгддэг платформ. 2023 оноос "Q-Chat" хэмээх AI багшийг нэвтрүүлсэн. Гэсэн хэдий ч хэрэглэгч өөрөө контентоо оруулах шаардлагатай хэвээр байгаа бөгөөд урт хэмжээний PDF файлыг бүрэн задлан шинжлэхэд хязгаарлагдмал.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/chapter1/similarsystems/quizletlogo.png}
+    \caption{Quizlet лого}
+    \label{fig:quizletlogo}
+  \end{figure}
+  \item \textbf{Google NotebookLM:} 2024 онд танилцуулагдсан Google-ийн энэхүү хэрэгсэл нь эх сурвалжид суурилсан AI тэмдэглэлийн дэвтэр юм. Энэ нь хэрэглэгчийн оруулсан баримт бичиг дээр үндэслэн асуултад хариулж, хураангуй гаргадаг. Энэ нь манай системтэй хамгийн төстэй боловч сургалтын явцыг хянах болон шалгалт өгч сэдвийг "дууссан" гэж тэмдэглэх LMS-ийн шинж чанаргүй юм.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/chapter1/similarsystems/notebooklmlogo.png}
+    \caption{NotebookLM лого}
+    \label{fig:notebooklmlogo}
+  \end{figure}
+  \item \textbf{Mem.ai:} Хувийн мэдлэгийн сан үүсгэхэд чиглэсэн AI платформ. Мэдээллийг автоматаар холбох давуу талтай ч оюутны шалгалтад бэлдэх хэрэгцээг бүрэн хангадаггүй.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/chapter1/similarsystems/memailogo.png}
+    \caption{Mem.ai лого}
+    \label{fig:notebooklmlogo}
+  \end{figure}
+\end{enumerate}
+
+\begin{longtable}{| p{5cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} |}
+\caption{AI-д суурилсан сургалтын системүүдийн харьцуулалт}
+\label{tab:ai_learning_systems}\\
+\hline
+{\bfseries Үзүүлэлтүүд (Features)} & {\bf Notion AI} & {\bf Quizlet} & {\bf Google NotebookLM} & {\bf Mem.ai} & {\bf Proposed System} \\ \hline
+
+{\bf PDF Задлан шинжилгээ} & Хязгаарлагдмал & Үгүй & Тийм & Тийм & Тийм \\ \hline
+
+{\bf Автомат хураангуй (Summary)} & Тийм & Үгүй & Тийм & Тийм & Тийм \\ \hline
+
+{\bf Флаш карт \& Сорил үүсгэх} & Үгүй & Тийм (Гараар/AI) & Хязгаарлагдмал & Үгүй & Тийм (Автомат) \\ \hline
+
+{\bf Агуулгад суурилсан Чатбот} & Тийм (Ерөнхий) & Тийм (Q-Chat) & Тийм & Тийм & Тийм (Контексттэй) \\ \hline
+
+{\bf Суралцах явцын хяналт} & Үгүй & Тийм & Үгүй & Үгүй & Тийм \\ \hline
+
+{\bf Сургалтын бүтэц (Topic/Chapter)} & Үгүй & Үгүй & Үгүй & Үгүй & Тийм \\ \hline
+
+\end{longtable}
+
+\section{Технологийн судалгаа}
+
+\subsection{Хөгжүүлэлтэд ашиглах алгоритм}
+
+\subsection{Технологийн судалгаа}
+
+\subsection{Бүлгийн дүгнэлт}
